@@ -32,6 +32,11 @@
 					value="<%=tc.getTccourse()%>"></td>
 			</tr>
 			<tr>
+				<td>权值：</td>
+				<td><input type="number" size=20 name="courseWeight"
+					value="<%=tc.getCourseWeight()%>"></td>
+			</tr>
+			<tr>
 				<td align="center" colspan="2"><input type="hidden" name="tcid"
 					value="<%=tc.getTcid()%>" /><input type="submit" value="提交">&nbsp;&nbsp;
 					<input type="reset" value="重置"></td>

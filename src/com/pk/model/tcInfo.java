@@ -5,6 +5,7 @@ public class tcInfo {
 	private String tcname;
 	private String tccourse;
 	private int tcjgh;
+	private int courseWeight;
 
 	public int getTcid() {
 		return tcid;
@@ -30,5 +31,14 @@ public class tcInfo {
 	public void setTcjgh(int tcjgh) {
 		this.tcjgh = tcjgh;
 	}
+	public int getCourseWeight() {
+		return courseWeight;
+	}
+	public void setCourseWeight(int courseWeight) {
+		this.courseWeight = courseWeight;
+	}
+	
+	
+	
 }
 

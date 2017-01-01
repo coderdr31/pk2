@@ -22,11 +22,11 @@ public class tcInfoService {
 
 	public boolean addTc(tcInfo tc) {
 		try {
-			pstmt = conn.prepareStatement("insert into tcinfo" + "(tcjgh,tcname,tccourse) " + "values(?,?,?)");
+			pstmt = conn.prepareStatement("insert into tcinfo" + "(tcjgh,tcname,tccourse,courseWeight) " + "values(?,?,?,?)");
 			pstmt.setInt(1, tc.getTcjgh());
 			pstmt.setString(2, tc.getTcname());
 			pstmt.setString(3, tc.getTccourse());
-
+			pstmt.setInt(4, tc.getCourseWeight());
 			pstmt.executeUpdate();
 			return true;
 		} catch (SQLException e) {
@@ -49,7 +49,7 @@ public class tcInfoService {
 				tc.setTcname(rs.getString(2));
 				tc.setTccourse(rs.getString(3));
 				tc.setTcjgh(rs.getInt(4));
-				
+				tc.setCourseWeight(rs.getInt(5));
 				tcs.add(tc);
 			}
 			return tcs;
@@ -93,7 +93,7 @@ public class tcInfoService {
 				tc.setTcname(rs.getString(2));
 				tc.setTccourse(rs.getString(3));
 				tc.setTcjgh(rs.getInt(4));
-								
+				tc.setCourseWeight(rs.getInt(5));				
 				return tc;
 
 			}
@@ -110,11 +110,12 @@ public class tcInfoService {
 	public boolean updateTc(tcInfo tc) {
 
 		try {
-			pstmt = conn.prepareStatement("update  tcinfo set tcname=? , tccourse=? , tcjgh=?  where tcid=?");
+			pstmt = conn.prepareStatement("update  tcinfo set tcname=? , tccourse=? , tcjgh=? ,courseWeight=? where tcid=?");
 			pstmt.setString(1, tc.getTcname());
 			pstmt.setString(2, tc.getTccourse());
 			pstmt.setInt(3, tc.getTcjgh());
 			pstmt.setInt(4, tc.getTcid());
+			pstmt.setInt(5, tc.getCourseWeight());
 			pstmt.executeUpdate();
 			return true;
 		} catch (SQLException e) {

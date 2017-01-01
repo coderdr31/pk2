@@ -21,6 +21,7 @@
 			<th>教工号</th>
 			<th>姓名</th>
 			<th>所教课程</th>
+			<th>权值</th>
 			<td></td>
 			<td></td>
 
@@ -35,11 +36,9 @@
 			<td><%=tc.getTcjgh()%></td>
 			<td><%=tc.getTcname()%></td>
 			<td><%=tc.getTccourse()%></td>
-
-			<td><a
-				href="modifyOneTc.jsp?tcid=<%=tc.getTcid()%>">修改</a></td>
-			<td><a
-				href="deleteOneTc.jsp?tcid=<%=tc.getTcid()%>">删除</a></td>
+			<td><%=tc.getCourseWeight()%></td>
+			<td><a href="modifyOneTc.jsp?tcid=<%=tc.getTcid()%>">修改</a></td>
+			<td><a href="deleteOneTc.jsp?tcid=<%=tc.getTcid()%>">删除</a></td>
 
 		</tr>
 		<%

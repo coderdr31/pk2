@@ -32,7 +32,7 @@ public class schedulerService {
 		System.out.println("清空课表");
 		Vector tc_v = new Vector();
 		try {
-			pstmt = conn.prepareStatement("select tcid from tcinfo");
+			pstmt = conn.prepareStatement("select tcid from tcinfo order by courseWeight DESC");
 			pstmt.execute();
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){ tc_v.add(rs.getInt(1)); }

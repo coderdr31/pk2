@@ -14,7 +14,9 @@
    <a href="addTeacherInfo.jsp" target="main_right">录入教师信息</a><br>
    <a href="modifyTcInfo.jsp" target="main_right">修改或删除教师信息</a><br>
    <a href="courseInfo.jsp" target="main_right">课程列表</a><br>
-<!--    <a href="exit.jsp" target="main_right">退出</a><br> -->
-   <a href="exit.jsp" target="_top">退出</a><br>
+   <a href="classInfo.jsp" target="main_right">班级列表</a><br>
+   
+   <a href="index.jsp" target="top.jsp">退出</a><br>
+<!--    <a href="index.jsp">退出</a><br> -->
   </body>
 </html>
