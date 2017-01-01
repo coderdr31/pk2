@@ -4,6 +4,7 @@ public class tcInfo {
 	private int tcid;
 	private String tcname;
 	private String tccourse;
+	private int tcjgh;
 
 	public int getTcid() {
 		return tcid;
@@ -22,6 +23,12 @@ public class tcInfo {
 	}
 	public void setTccourse(String tccourse) {
 		this.tccourse = tccourse;
+	}
+	public int getTcjgh() {
+		return tcjgh;
+	}
+	public void setTcjgh(int tcjgh) {
+		this.tcjgh = tcjgh;
 	}
 }
 
