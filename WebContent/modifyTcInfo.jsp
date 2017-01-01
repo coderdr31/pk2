@@ -17,10 +17,10 @@
 <body>
 	<table>
 		<tr>
-			<td>记录号</td>
-			<td>教工号</td>
-			<td>姓名</td>
-			<td>所教课程</td>
+			<th>记录号</th>
+			<th>教工号</th>
+			<th>姓名</th>
+			<th>所教课程</th>
 			<td></td>
 			<td></td>
 

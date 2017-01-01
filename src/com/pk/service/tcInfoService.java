@@ -62,6 +62,26 @@ public class tcInfoService {
 
 	}
 
+	public List queryTcName() {
+		List tcs = new ArrayList();
+		try {
+			pstmt = conn.prepareStatement("select distinct tcname from tcinfo order by tcname");
+			ResultSet rs = pstmt.executeQuery(); // 结果集
+			while (rs.next()) {
+				tcInfo tc = new tcInfo();
+				tc.setTcname(rs.getString(1));
+				
+				tcs.add(tc);
+			}
+			return tcs;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+
+	}
 	public tcInfo queryTcbyID(int tcid) {
 		try {
 			pstmt = conn.prepareStatement("select * from tcinfo where tcid=?");

@@ -10,7 +10,7 @@
 <%--   <jsp:include page="islogin.jsp"></jsp:include> --%>
   <body>
    <a href="displayClassScheduler.jsp" target="main_right">查看班级课表</a><br>
-   <a href="displaystuinfo.jsp" target="main_right">查看教师课表</a><br>
+   <a href="displayTcScheduler.jsp" target="main_right">查看教师课表</a><br>
    <a href="addTeacherInfo.jsp" target="main_right">录入教师信息</a><br>
    <a href="modifyTcInfo.jsp" target="main_right">修改或删除教师信息</a><br>
    <a href="courseInfo.jsp" target="main_right">课程列表</a><br>

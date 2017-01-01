@@ -1,5 +1,5 @@
 <%@ page import="java.util.*"%>
-<%@ page import="com.pk.model.classInfo"%>
+<%@ page import="com.pk.model.tcInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,24 +8,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:useBean id="ClaSer" class="com.pk.service.classInfoService"></jsp:useBean>
+<jsp:useBean id="TcSer" class="com.pk.service.tcInfoService"></jsp:useBean>
 <%
-	List clas = ClaSer.queryAllcla();
-	// out.print(stus.size());  
-	Iterator iter = clas.iterator();
+	List tcs = TcSer.queryTcName();
+	Iterator iter = tcs.iterator();
 %>
 
 <body>
-<form action="displayClassScheduler_result.jsp" method="post">
+<form action="displayTcScheduler_result.jsp" method="post">
 		<tr>
-			<td>班级：</td>
-			<td><select name="classname">
+			<td>教师：</td>
+			<td><select name="tcname">
 					<%
 						while (iter.hasNext()) {
-							classInfo cla = (classInfo) iter.next();
+							tcInfo tc = (tcInfo) iter.next();
 					%>
 
-					<option><%=cla.getClassname()%></option>
+					<option><%=tc.getTcname()%></option>
 					<%
 						}
 					%>

@@ -18,8 +18,8 @@
 <body>
 	<table>
 		<tr>
-			<td>课程名</td>
-			<td>总课时数</td>
+			<th>课程名</th>
+			<th>总课时数</th>
 			<td></td>
 			<td></td>
 		</tr>
